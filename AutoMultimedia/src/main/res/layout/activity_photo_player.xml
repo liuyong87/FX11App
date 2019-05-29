@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/photo_player_bg"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_photo_name"
+        android:layout_width="241px"
+        android:layout_height="42px"
+        android:layout_marginLeft="39px"
+        android:layout_marginTop="65px"
+        android:background="@drawable/photo_name_bg"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="6px"
+        android:text="@android:string/unknownName"
+        android:textColor="@android:color/white"
+        android:textSize="19px"
+        android:singleLine="true"/>
+
+    <include
+        layout="@layout/include_photo_play_control_bar"
+        android:layout_width="match_parent"
+        android:layout_height="72px"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

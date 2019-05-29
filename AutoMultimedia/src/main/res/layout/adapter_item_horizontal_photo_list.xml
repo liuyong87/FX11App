@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="185px"
+        android:layout_height="130px"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingBottom="7px"
+        android:paddingTop="7px">
+
+        <ImageView
+            android:id="@+id/iv_photo_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

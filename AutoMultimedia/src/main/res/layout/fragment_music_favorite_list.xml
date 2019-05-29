@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/lv_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollAlwaysVisible="true"
+        android:scrollbarStyle="insideInset"
+        android:paddingRight="21px"
+        android:divider="@drawable/list_divider_line"/>
+
+    <TextView
+        android:id="@+id/tv_list_state_text"
+        style="@style/MediaListEmptyAlertTextStyle"
+        android:text="@string/tv_alert_favorite_list_empty_text"/>
+</RelativeLayout>

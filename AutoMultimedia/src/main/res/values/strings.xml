@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">AutoBMMultimedia</string>
+    <string name="test_text_leng_text">dfsfsfsfsafasdfsfsafdsfsfdsadfsafdsfsafdfdsfa</string>
+    <!--[Naming rules : ui_id + attr]-->
+    <!--command string-->
+    <string name="tv_scan_status_unmount_usb_text">Please insert USB device!</string>
+    <string name="tv_scan_status_failure_usb_text">Load failed!</string>
+    <string name="tv_scan_status_loadding_text">USB device is loading...</string>
+    <string name="status_bar_music_title_text">Music</string>
+    <string name="status_bar_video_title_text">Video</string>
+    <string name="status_bar_photo_title_text">Picture</string>
+    <string name="status_bar_list_title_text">List</string>
+    <string name="status_bar_video_list_title_text">Video List</string>
+    <string name="status_bar_music_list_title_text">Music List</string>
+    <string name="status_bar_photo_list_title_text">Picture List</string>
+    <string name="status_bar_favorite_list_title_text">Favourite</string>
+    <string name="status_bar_folder_list_title_text">File</string>
+    <string name="tv_alert_music_list_empty_text">USB no valid music files！</string>
+    <string name="tv_alert_video_list_empty_text">USB no valid video files!</string>
+    <string name="tv_alert_photo_list_empty_text">USB no valid picture files!</string>
+    <string name="tv_alert_favorite_list_empty_text">No valid media files!</string>
+    <string name="tv_alert_folder_list_empty_text">No valid media files！</string>
+    <string name="tv_alert_media_play_error_text">File error, unable to play!</string>
+    <!--common sidebar text-->
+    <string name="tv_usb_one">USB1</string>
+    <string name="tv_usb_two">USB2</string>
+    <string name="tv_bt">Bluetooth</string>
+    <!--USB status text-->
+    <string name="tv_usb_disconnect">USB disconnect</string>
+    <string name="tv_usb_loading">USB device is loading</string>
+
+    <!--music-->
+    <string name="tv_curTime_text">00:00</string>
+    <string name="tv_totalTime_text">00:00</string>
+    <string name="tv_position_text">"0/0"</string>
+    <string name="tv_songName_text">Unknow Song</string>
+    <string name="tv_artistName_text">Unknow Artist</string>
+    <string name="tv_albumName_text">Unknow  Album</string>
+    <!--music lrc text-->
+    <string name="tv_playing">正在播放</string>
+    <string name="lrc_label">暂无歌词</string>
+
+    <!--video-->
+    <string name="driving_video_warning_title_text">Warning!!!</string>
+    <string name="driving_video_warning_content_text">Warning!!! For your safety, please do not watch video while driving.</string>
+    <string name="driving_video_warning_back_btn_text">back</string>
+    <string name="video_time_separator">"/"</string>
+
+    <!--photo-->
+    <string name="tv_alert_change_first_photo_text">End of list,go back to the first one</string>
+    <string name="tv_alert_change_last_photo_text">End of list,go back to the first last</string>
+    <string name="tv_count_text">Total</string>
+    <string name="tv_count_num_def">0</string>
+
+    <!--bt text-->
+    <string name="btn_connect_switch_text">连接蓝牙</string>
+    <string name="btn_bt_disconnection_text">蓝牙未连接</string>
+    <string name="btn_bt_connection_text">蓝牙已连接</string>
+    <string name="tv_bt_list_text">蓝牙音乐无列表</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

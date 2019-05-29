@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bt_music_bg">
+
+    <LinearLayout
+        android:id="@+id/ll_bt_connect_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_bt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_bt_disconnection_text"
+            android:textColor="@android:color/white"
+            android:textSize="24px" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_bt_logo"
+            android:layout_marginTop="37px"
+            android:layout_marginBottom="37px"/>
+
+        <Button
+            android:id="@+id/btn_bt_connect_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_btn_connect_switch"
+            android:text="@string/btn_connect_switch_text"
+            android:textColor="@android:color/white"
+            android:textSize="19px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bt_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24px"
+        android:text="@string/tv_bt_list_text"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"/>
+
+
+</RelativeLayout>

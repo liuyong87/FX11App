@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="223px"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/rl_bt"
+            android:layout_marginTop="33px"
+            android:layout_width="match_parent"
+            android:layout_height="65px">
+            <ImageView
+                android:layout_marginLeft="40px"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_bt_normal"
+                android:id="@+id/iv_bt"
+                android:layout_width="40px"
+                android:layout_height="40px" />
+            <TextView
+                android:id="@+id/tv_bt"
+                android:layout_toRightOf="@+id/iv_bt"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:text="@string/tv_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="39px"
+            android:id="@+id/rl_usb_one"
+            android:layout_width="match_parent"
+            android:layout_height="65px">
+            <ImageView
+                android:layout_marginLeft="40px"
+                android:src="@drawable/iv_usb_normal"
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_usb_one"
+                android:layout_width="40px"
+                android:layout_height="40px" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toRightOf="@+id/iv_usb_one"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/tv_usb_one"
+                android:id="@+id/tv_usb_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="39px"
+            android:id="@+id/rl_usb_two"
+            android:layout_width="match_parent"
+            android:layout_height="65px">
+            <ImageView
+                android:layout_marginLeft="40px"
+                android:src="@drawable/iv_usb_normal"
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_usb_two"
+                android:layout_width="40px"
+                android:layout_height="40px" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toRightOf="@+id/iv_usb_two"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/tv_usb_two"
+                android:id="@+id/tv_usb_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

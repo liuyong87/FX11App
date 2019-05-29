@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_play_control_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bar_bottom_bg">
+
+    <ImageView
+        android:id="@+id/iv_list"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_btn_list_icon"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_prev"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_btn_prev"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_switch"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_btn_play"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_next"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_btn_next"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+</LinearLayout>

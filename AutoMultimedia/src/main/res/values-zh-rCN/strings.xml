@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">AutoBMMultimedia</string>
+    <string name="test_text_leng_text">dfsfsfsfsafasdfsfsafdsfsfdsadfsafdsfsafdfdsfa</string>
+    <!--[Naming rules : ui_id + attr]-->
+    <!--common string-->
+    <string name="tv_scan_status_unmount_usb_text">请插入USB设备</string>
+    <string name="tv_scan_status_failure_usb_text">U盘加载失败</string>
+    <string name="tv_scan_status_loadding_text">正在加载 ...</string>
+    <string name="status_bar_music_title_text">音乐</string>
+    <string name="status_bar_video_title_text">视频</string>
+    <string name="status_bar_photo_title_text">图片</string>
+    <string name="status_bar_list_title_text">列表</string>
+    <string name="status_bar_video_list_title_text">视频列表</string>
+    <string name="status_bar_music_list_title_text">音乐列表</string>
+    <string name="status_bar_photo_list_title_text">图片列表</string>
+    <string name="status_bar_favorite_list_title_text">收藏列表</string>
+    <string name="status_bar_folder_list_title_text">文件列表</string>
+    <string name="tv_alert_music_list_empty_text">USB无音乐文件！</string>
+    <string name="tv_alert_video_list_empty_text">USB无视频文件！</string>
+    <string name="tv_alert_photo_list_empty_text">USB无图片文件！</string>
+    <string name="tv_alert_favorite_list_empty_text">当前没有收藏！</string>
+    <string name="tv_alert_folder_list_empty_text">无媒体文件！</string>
+    <string name="tv_alert_media_play_error_text">文件错误，无法播放！</string>
+    <!--common sidebar text-->
+    <string name="tv_usb_one">USB1</string>
+    <string name="tv_usb_two">USB2</string>
+    <string name="tv_bt">Bluetooth</string>
+
+    <!--USB status text-->
+    <string name="tv_usb_disconnect">USB未连接</string>
+    <string name="tv_usb_loading">"USB加载中 ..."</string>
+
+    <!--music-->
+    <string name="tv_curTime_text">00:00</string>
+    <string name="tv_totalTime_text">00:00</string>
+    <string name="tv_position_text">"0/0"</string>
+    <string name="tv_songName_text">未知歌曲</string>
+    <string name="tv_artistName_text">未知艺人</string>
+    <string name="tv_albumName_text">未知专辑</string>
+    <!--music lrc text-->
+    <string name="tv_playing">正在播放</string>
+    <string name="lrc_label">暂无歌词</string>
+
+    <!--video-->
+    <string name="driving_video_warning_title_text">警告！！！</string>
+    <string name="driving_video_warning_content_text">为了您的安全，请勿在行车时观看视频。</string>
+    <string name="driving_video_warning_back_btn_text">返回</string>
+    <string name="video_time_separator">"/"</string>
+
+    <!--photo-->
+    <string name="tv_alert_change_first_photo_text">列表结束，回到第一张</string>
+    <string name="tv_alert_change_last_photo_text">列表结束，回到最后一张</string>
+
+    <!--bt text-->
+    <string name="btn_connect_switch_text">连接蓝牙</string>
+    <string name="btn_bt_disconnection_text">蓝牙未连接</string>
+    <string name="btn_bt_connection_text">蓝牙已连接</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_count_text">共</string>
+    <string name="tv_count_num_def">0</string>
+    <string name="tv_bt_list_text">蓝牙音乐无列表</string>
+</resources>

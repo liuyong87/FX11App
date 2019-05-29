@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.semisky.multimedia"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <!--监听系统配制权限-->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <application
+        android:name=".application.MediaApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/ActivityTransparentTheme">
+        <meta-data
+            android:name="com.semisky.multimedia.media_photo.adapter.PhotoGlideModule"
+            android:value="GlideModule" />
+        <!--USB-->
+        <receiver android:name=".media_usb.broadcast.USBReciver">
+            <intent-filter>
+                <data android:scheme="file" />
+
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".media_multimedia.MultimediaService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="factoryTestMusic" />
+                <action android:name="factoryTestVideo" />
+                <action android:name="factoryTestPicture" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".media_usb.service.MediaStorageService"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="com.semisky.service.ACTION_DEBUG" />
+                <action android:name="com.semisky.service.ACTION_FACTORY_TEST" />
+                <action android:name="com.semisky.service.ACTION_OPS_CONTROL" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".MainActivity"></activity>
+        <!--Music-->
+        <activity
+            android:name=".media_music.view.MusicPlayerActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--添加隐工意图-->
+            <intent-filter>
+                <action android:name="com.semisky.action.VIEW_MUSIC_PLAYTER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--Music List-->
+        <activity android:name=".media_music.view.MusicListActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.semisky.action.VIEW_MUSIC_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".media_music.service.LocalMusicService"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="com.semisky.service.ACTION_MUSIC_PLAY_CONTROL" />
+                <action android:name="com.semisky.service.ACTION_MUSIC_DEBUG_LOG" />
+            </intent-filter>
+        </service>
+        <!--Video-->
+        <activity
+            android:name=".media_video.view.VideoPlayerActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/ActivityBlackTheme">
+            <!--添加隐工意图-->
+            <intent-filter>
+                <action android:name="com.semisky.action.VIEW_VIDEO_PLAYTER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".media_video.view.VideoListActivity"></activity>
+        <!--Photo-->
+        <activity
+            android:name=".media_photo.view.PhotoPlayerActivity"
+            android:launchMode="singleInstance">
+            <!--添加隐工意图-->
+            <intent-filter>
+                <action android:name="com.semisky.action.VIEW_PHOTO_PLAYTER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".media_photo.view.PhotoListActivity"></activity>
+
+
+    </application>
+
+</manifest>

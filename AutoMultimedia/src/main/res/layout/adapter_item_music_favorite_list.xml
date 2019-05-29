@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="82px"
+    android:background="@drawable/selector_list_item_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="44px"
+    android:id="@+id/ll_layout_favorite">
+
+    <ImageView
+        android:id="@+id/iv_icon_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="35px"
+        android:src="@drawable/list_icon_music"/>
+
+    <TextView
+        android:id="@+id/tv_songName"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="@android:string/unknownName"
+        android:textColor="@android:color/white"
+        android:textSize="30px"/>
+
+    <ImageView
+        android:id="@+id/iv_icon_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="16px"
+        android:src="@drawable/playing_big_icon"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_favorite_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/music_favorite_icon_pressed"
+        />
+
+
+</LinearLayout>

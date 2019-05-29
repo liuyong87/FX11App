@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="223px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_usb1"
+            android:layout_width="wrap_content"
+            android:layout_height="65px"
+            android:drawableLeft="@drawable/iv_usb_normal"
+            android:drawablePadding="16px"
+            android:gravity="center_vertical"
+            android:paddingLeft="40px"
+            android:text="@string/tv_usb_one"
+            android:textColor="@android:color/white"
+            android:textSize="19px" />
+
+        <Button
+            android:id="@+id/btn_usb2"
+            android:layout_width="wrap_content"
+            android:layout_height="65px"
+            android:layout_marginTop="65px"
+            android:drawableLeft="@drawable/iv_usb_normal"
+            android:drawablePadding="16px"
+            android:gravity="center_vertical"
+            android:paddingLeft="40px"
+            android:text="@string/tv_usb_two"
+            android:textColor="@android:color/white"
+            android:textSize="19px" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>

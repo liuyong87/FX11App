@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/playbackground"
+    tools:context="com.semisky.multimedia.media_music.view.MusicPlayerActivity">
+
+    <ImageButton
+        android:id="@+id/iv_list"
+        android:layout_width="65px"
+        android:layout_height="65px"
+        android:layout_marginLeft="28px"
+        android:layout_marginTop="16px"
+        android:background="@null"
+        android:src="@drawable/music_btn_list_normal" />
+
+    <ImageButton
+        android:id="@+id/iv_sound"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="26px"
+        android:layout_marginRight="127px"
+        android:background="@null"
+        android:src="@drawable/btn_sound_normal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_song_info"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_sb"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_musicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26px"
+            android:textColor="@color/white"
+            android:textSize="29px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_artist_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_musicName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px">
+
+            <TextView
+                android:id="@+id/tv_artistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/colorArtist"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/tv_albumName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_artistName"
+                android:gravity="left"
+                android:textColor="@color/colorArtist"
+                android:textSize="16px" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/iv_album_photo"
+            android:layout_width="812px"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_artist_album"
+            android:layout_marginTop="24px">
+
+            <com.semisky.multimedia.media_music.LrcView.LrcView
+                android:id="@+id/lrc_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <com.semisky.multimedia.media_music.viewPager.ViewPagerRelativeLayout
+                android:id="@+id/rl_container"
+                android:layout_width="680dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:clipChildren="false">
+
+
+                <com.semisky.multimedia.media_music.viewPager.ClipViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="200px"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:clipChildren="false">
+
+                </com.semisky.multimedia.media_music.viewPager.ClipViewPager>
+
+                <ImageButton
+                    android:id="@+id/iv_switch"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_play_normal"
+                    android:background="@null"/>
+
+            </com.semisky.multimedia.media_music.viewPager.ViewPagerRelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="18px"
+        android:layout_marginBottom="21px"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/iv_playing_list"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28px"
+            android:src="@drawable/btn_list_playing_normal"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/iv_play_mode"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="77px"
+            android:layout_toRightOf="@+id/iv_playing_list"
+            android:background="@null"
+            android:src="@drawable/btn_playmode_cycle_pressed" />
+
+
+        <SeekBar
+            android:id="@+id/sb_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="102px"
+            android:layout_marginRight="29px"
+            android:layout_toLeftOf="@+id/tv_currentTime"
+            android:layout_toRightOf="@+id/iv_play_mode"
+            android:layout_centerVertical="true"
+            android:max="0"
+            android:maxHeight="5px"
+            android:minHeight="5px"
+            android:progressDrawable="@drawable/sb_style_layer_list"
+            android:thumb="@drawable/slidingicon" />
+
+
+        <TextView
+            android:id="@+id/tv_currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_toLeftOf="@+id/tv_totalTime"
+            android:text="@string/tv_totalTime_text"
+            android:textColor="@color/white"
+            android:textSize="20px" />
+
+        <TextView
+            android:id="@+id/tv_totalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="44px"
+            android:layout_toLeftOf="@+id/iv_lrc_switch"
+            android:text="@string/tv_totalTime_text"
+            android:textColor="@color/colorArtist"
+            android:textSize="20px" />
+
+        <ImageButton
+            android:id="@+id/iv_lrc_switch"
+            android:layout_width="80px"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="49px"
+            android:clickable="true"
+            android:background="@null"
+            android:src="@drawable/selector_btn_music_lyric_switch" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
